@@ -1,0 +1,81 @@
+import { motion } from "framer-motion"
+
+export default function Hero() {
+  return (
+    <section className="relative h-screen bg-black overflow-hidden flex items-center justify-center">
+
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:80px_80px]" />
+  </div>
+
+      {/* Background Glow */}
+      <motion.div
+  animate={{
+    scale: [1, 1.2, 1],
+    opacity: [0.4, 0.7, 0.4],
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+  }}
+  className="absolute w-[700px] h-[700px] bg-blue-500/20 blur-[150px] rounded-full"
+/>
+
+      {/* Content */}
+      <div className="relative z-10 text-center px-6">
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="uppercase tracking-[8px] text-blue-500 text-sm mb-6"
+        >
+          Cinematic Video Editing
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+          className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tight"
+        >
+          <span className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+            Pixel And
+            </span>
+          <br />
+          Sample Studio
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="max-w-2xl mx-auto mt-8 text-gray-400 text-lg leading-relaxed"
+        >
+          Crafting cinematic visuals, emotional storytelling,
+          and premium edits that transform ordinary footage
+          into unforgettable experiences.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2 }}
+          className="mt-10 flex flex-col md:flex-row gap-4 justify-center"
+        >
+
+          <button className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-semibold">
+            View Projects
+          </button>
+
+          <button className="border border-white/20 hover:border-blue-500 transition px-8 py-4 rounded-2xl text-lg font-semibold">
+            Contact Us
+          </button>
+
+        </motion.div>
+
+      </div>
+
+    </section>
+  )
+}
