@@ -3,32 +3,32 @@ import { motion } from "framer-motion"
 const projects = [
   {
     title: "Cinematic Reel",
-    video: "/videos/project1.mp4",
+    video: "/videos/",
   },
 
   {
     title: "Luxury Wedding",
-    video: "/videos/project2.mp4",
+    video: "/videos/",
   },
 
   {
     title: "Commercial Edit",
-    video: "/videos/project3.mp4",
+    video: "/videos/",
   },
 
   {
     title: "Real Estate Film",
-    video: "/videos/project4.mp4",
+    video: "/videos/",
   },
 
   {
     title: "YouTube Documentary",
-    video: "/videos/project5.mp4",
+    video: "/videos/",
   },
 
   {
     title: "Music Sync Edit",
-    video: "/videos/project6.mp4",
+    video: "/videos/",
   },
 ]
 
