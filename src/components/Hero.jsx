@@ -43,7 +43,7 @@ export default function Hero() {
     initial={{ opacity: 0, y: 60 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1.2 }}
-    className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tight"
+    className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-none tracking-tight"
   >
 
     <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">

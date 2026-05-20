@@ -36,7 +36,7 @@ export default function CustomCursor() {
         stiffness: 500,
         damping: 28,
       }}
-      className="fixed top-0 left-0 w-[30px] h-[30px] rounded-full bg-purple-500/80 blur-[1px] pointer-events-none z-[99999] mix-blend-screen"
+      className="hidden md:block fixed top-0 left-0 w-[30px] h-[30px] rounded-full bg-purple-500/80 blur-[1px] pointer-events-none z-[99999] mix-blend-screen"
     />
   )
 }
