@@ -11,12 +11,15 @@ export default function Reveal({ children }) {
       ref.current,
       {
         opacity: 0,
-        y: 80,
+        y: 100,
+        filter: "blur(20px)",
       },
+
       {
         opacity: 1,
         y: 0,
-        duration: 1.4,
+        filter: "blur(0px)",
+        duration: 1.6,
         ease: "power4.out",
       }
     )

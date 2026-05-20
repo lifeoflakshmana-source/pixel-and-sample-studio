@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Reveal from "./Reveal"
 
 const services = [
   "Cinematic Editing",
@@ -12,7 +13,7 @@ const services = [
 export default function Services() {
   return (
     <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
-
+        <Reveal>
       {/* Glow */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full"></div>
 
@@ -81,6 +82,7 @@ export default function Services() {
         </div>
 
       </div>
+      </Reveal>
     </section>
   )
 }

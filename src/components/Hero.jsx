@@ -6,6 +6,11 @@ import Reveal from "./Reveal"
 export default function Hero() {
   return (
     <section className="relative h-screen bg-black overflow-hidden flex items-center justify-center">
+        {/* Floating Purple Light */}
+<div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-[150px] animate-pulse"></div>
+
+{/* Floating Pink Light */}
+<div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-[150px] animate-pulse"></div>
         <ParticlesBackground />
 
   <div className="absolute inset-0 opacity-20">
@@ -26,7 +31,7 @@ export default function Hero() {
 />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6">
+      <div className="relative z-10 text-center px-6 backdrop-blur-[2px]">
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +48,7 @@ export default function Hero() {
     initial={{ opacity: 0, y: 60 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1.2 }}
-    className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-none tracking-tight"
+    className="floating-animation text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-none tracking-tight"
   >
 
     <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">

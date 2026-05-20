@@ -36,7 +36,7 @@ export default function MouseGlowTrail() {
         ease: "linear",
         duration: 0.25,
       }}
-      className="hidden md:block fixed top-0 left-0 w-[300px] h-[300px] rounded-full bg-purple-500/20 blur-[120px] pointer-events-none z-[1]"
+      className="hidden md:block fixed top-0 left-0 w-[300px] h-[300px] rounded-full bg-purple-500/20 blur-[120px] pointer-events-none z-0"
     />
   )
 }

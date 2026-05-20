@@ -1,9 +1,10 @@
 import { motion } from "framer-motion"
+import Reveal from "./Reveal"
 
 export default function Showreel() {
   return (
     <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
-
+        <Reveal>
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[140px] rounded-full"></div>
 
@@ -55,7 +56,7 @@ export default function Showreel() {
         </motion.div>
 
       </div>
-
+    </Reveal>
     </section>
   )
 }
