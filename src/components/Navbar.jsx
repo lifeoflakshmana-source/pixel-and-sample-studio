@@ -14,7 +14,7 @@ export default function Navbar() {
           <a href="#">Contact</a>
         </div>
 
-        <button className="bg-blue-500 hover:bg-blue-600 transition px-5 py-2 rounded-xl text-sm font-semibold">
+        <button className="bg-purple-500 hover:bg-purple-600 transition px-5 py-2 rounded-xl text-sm font-semibold">
           Start Project
         </button>
 

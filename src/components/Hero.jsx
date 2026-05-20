@@ -1,8 +1,12 @@
 import { motion } from "framer-motion"
+import MagneticButton from "./MagneticButton"
+import ParticlesBackground from "./ParticlesBackground"
+import Reveal from "./Reveal"
 
 export default function Hero() {
   return (
     <section className="relative h-screen bg-black overflow-hidden flex items-center justify-center">
+        <ParticlesBackground />
 
   <div className="absolute inset-0 opacity-20">
     <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:80px_80px]" />
@@ -18,7 +22,7 @@ export default function Hero() {
     duration: 6,
     repeat: Infinity,
   }}
-  className="absolute w-[700px] h-[700px] bg-blue-500/20 blur-[150px] rounded-full"
+  className="absolute w-[700px] h-[700px] bg-purple-500/20 blur-[150px] rounded-full"
 />
 
       {/* Content */}
@@ -28,23 +32,31 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="uppercase tracking-[8px] text-blue-500 text-sm mb-6"
+          className="uppercase tracking-[8px] text-purple-500 text-sm mb-6"
         >
           Cinematic Video Editing
         </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-          className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tight"
-        >
-          <span className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
-            Pixel And
-            </span>
-          <br />
-          Sample Studio
-        </motion.h1>
+        <Reveal>
+
+  <motion.h1
+    initial={{ opacity: 0, y: 60 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2 }}
+    className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tight"
+  >
+
+    <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+      Pixel And
+    </span>
+
+    <br />
+
+    Sample Studio
+
+  </motion.h1>
+
+</Reveal>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -64,11 +76,11 @@ export default function Hero() {
           className="mt-10 flex flex-col md:flex-row gap-4 justify-center"
         >
 
-          <button className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-semibold">
+          <MagneticButton>
             View Projects
-          </button>
+            </MagneticButton>
 
-          <button className="border border-white/20 hover:border-blue-500 transition px-8 py-4 rounded-2xl text-lg font-semibold">
+          <button className="border border-white/20 hover:border-purple-500 transition px-8 py-4 rounded-2xl text-lg font-semibold">
             Contact Us
           </button>
 

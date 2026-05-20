@@ -14,7 +14,7 @@ export default function Services() {
     <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
 
       {/* Glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -27,7 +27,7 @@ export default function Services() {
           className="text-center mb-20"
         >
 
-          <p className="uppercase tracking-[8px] text-blue-500 text-sm mb-4">
+          <p className="uppercase tracking-[8px] text-purple-500 text-sm mb-4">
             Services
           </p>
 
@@ -57,10 +57,10 @@ export default function Services() {
             >
 
               {/* Hover Glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-blue-500/5"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-purple-500/5"></div>
 
               {/* Number */}
-              <div className="text-6xl font-black text-blue-500/40 mb-8">
+              <div className="text-6xl font-black text-purple-500/40 mb-8">
                 0{index + 1}
               </div>
 

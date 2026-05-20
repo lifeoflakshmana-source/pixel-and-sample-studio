@@ -5,7 +5,7 @@ export default function Contact() {
     <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
 
       {/* Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[140px] rounded-full"></div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/10 blur-[140px] rounded-full"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
 
@@ -14,7 +14,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="uppercase tracking-[8px] text-blue-500 text-sm mb-6"
+          className="uppercase tracking-[8px] text-purple-500 text-sm mb-6"
         >
           Let’s Create
         </motion.p>
@@ -54,14 +54,14 @@ export default function Contact() {
 
           <a
             href="mailto:klakshmanadattu@gmail.com"
-            className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-semibold"
+            className="bg-purple-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl text-lg font-semibold"
           >
             Email Us
           </a>
 
           <a
-            href="#"
-            className="border border-white/20 hover:border-blue-500 transition px-8 py-4 rounded-2xl text-lg font-semibold"
+            href="https://www.instagram.com/pixelandsamplestudio/"
+            className="border border-white/20 hover:border-purple-500 transition px-8 py-4 rounded-2xl text-lg font-semibold"
           >
             Instagram
           </a>

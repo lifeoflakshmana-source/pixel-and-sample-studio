@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+*{
+  cursor: none;
+}
+
+:root{
+  --primary:#8B5CF6;
+  --secondary:#A855F7;
+  --bg:#050505;
+}
