@@ -1,6 +1,42 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Navbar() {
+
+  const [active, setActive] = useState("home")
+
+  useEffect(() => {
+
+  const sections = document.querySelectorAll("section[id]")
+
+  const handleScroll = () => {
+
+    sections.forEach((section) => {
+
+      const top = window.scrollY
+      const offset = section.offsetTop - 200
+      const height = section.offsetHeight
+      const id = section.getAttribute("id")
+
+      if (
+        top >= offset &&
+        top < offset + height
+      ) {
+        setActive(id)
+      }
+
+    })
+
+  }
+
+  window.addEventListener("scroll", handleScroll)
+
+  return () => {
+
+    window.removeEventListener("scroll", handleScroll)
+
+  }
+
+}, [])
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -44,25 +80,60 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 text-sm uppercase tracking-[3px] text-gray-300">
 
-            <a href="#home" className="hover:text-purple-400 transition">
-              Home
-            </a>
+            <a
+  href="#home"
+  className={`transition duration-300 ${
+    active === "home"
+      ? "text-purple-400"
+      : "text-gray-300 hover:text-purple-400"
+  }`}
+>
+  Home
+</a>
 
-            <a href="#about" className="hover:text-purple-400 transition">
-              About
-            </a>
+            <a
+  href="#about"
+  className={`transition duration-300 ${
+    active === "home"
+      ? "text-purple-400"
+      : "text-gray-300 hover:text-purple-400"
+  }`}
+>
+  About
+</a>
 
-            <a href="#services" className="hover:text-purple-400 transition">
-              Services
-            </a>
+            <a
+  href="#services"
+  className={`transition duration-300 ${
+    active === "home"
+      ? "text-purple-400"
+      : "text-gray-300 hover:text-purple-400"
+  }`}
+>
+  Services
+</a>
 
-            <a href="#portfolio" className="hover:text-purple-400 transition">
-              Portfolio
-            </a>
+            <a
+  href="#portfolio"
+  className={`transition duration-300 ${
+    active === "home"
+      ? "text-purple-400"
+      : "text-gray-300 hover:text-purple-400"
+  }`}
+>
+  Portfolio
+</a>
 
-            <a href="#contact" className="hover:text-purple-400 transition">
-              Contact
-            </a>
+            <a
+  href="#contact"
+  className={`transition duration-300 ${
+    active === "home"
+      ? "text-purple-400"
+      : "text-gray-300 hover:text-purple-400"
+  }`}
+>
+  Contact
+</a>
 
           </div>
 

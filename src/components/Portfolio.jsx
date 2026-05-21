@@ -2,6 +2,7 @@ import { useState } from "react"
 import Reveal from "./Reveal"
 import ProjectModal from "./ProjectModal"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 export default function Portfolio() {
 
@@ -105,20 +106,28 @@ export default function Portfolio() {
               >
 
                 {/* Video */}
-                <video
-                  src={project.video}
-                  muted
-                  loop
-                  playsInline
-                  preload="none"
-                  loading="lazy"
-                  onMouseEnter={(e) => e.target.play()}
-                  onMouseLeave={(e) => {
-                    e.target.pause()
-                    e.target.currentTime = 0
-                  }}
-                  className="w-full h-[320px] md:h-[500px] object-cover group-hover:scale-105 transition duration-700 pointer-events-none"
-                />
+                <motion.div
+  initial={{ opacity: 0, scale: 1.08 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2 }}
+  viewport={{ once: true }}
+>
+
+  <video
+    src={project.video}
+    muted
+    loop
+    playsInline
+    preload="none"
+    onMouseEnter={(e) => e.target.play()}
+    onMouseLeave={(e) => {
+      e.target.pause()
+      e.target.currentTime = 0
+    }}
+    className="w-full h-[320px] md:h-[500px] object-cover group-hover:scale-105 transition duration-700 pointer-events-none"
+  />
+
+</motion.div>
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />

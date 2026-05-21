@@ -23,6 +23,7 @@ import BookingCTA from "./components/BookingCTA"
 import Marquee from "./components/Marquee"
 import GrainOverlay from "./components/GrainOverlay"
 import CustomCursor from "./components/CustomCursor"
+import FloatingBadge from "./components/FloatingBadge"
 
 export default function App() {
 
@@ -41,6 +42,8 @@ export default function App() {
       <CustomCursor />
 
       <ScrollProgress />
+
+      <FloatingBadge />
 
       <AnimatePresence mode="wait">
 
