@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 import Loader from "./components/Loader"
 import SmoothScroll from "./components/SmoothScroll"
 import ScrollProgress from "./components/ScrollProgress"
+import AboutFounder from "./components/AboutFounder"
+import Testimonials from "./components/Testimonials"
 
 
 export default function App() {
@@ -24,11 +26,15 @@ export default function App() {
 
       <Hero />
 
+      <AboutFounder />
+
       <Showreel />
 
       <Services />
 
       <Portfolio />
+
+      <Testimonials />
 
       <Contact />
 
