@@ -2,27 +2,52 @@ export default function Footer() {
 
   return (
 
-    <footer className="relative border-t border-white/10 bg-[#050505] overflow-hidden">
+    <footer className="relative border-t border-white/10 bg-black overflow-hidden">
 
-      {/* Glow */}
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+      {/* Purple Glow */}
+      <div className="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-purple-600/15 blur-[140px] rounded-full"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-20 py-20">
+      {/* Pink Glow */}
+      <div className="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-pink-500/10 blur-[140px] rounded-full"></div>
+
+      {/* Grid Overlay */}
+      <div className="absolute inset-0 opacity-10">
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-20 py-24">
 
         <div className="grid md:grid-cols-3 gap-16">
 
           {/* Brand */}
           <div>
 
-            <h2 className="text-3xl font-black uppercase tracking-[6px] bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
-              Pixel And
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-[6px] leading-tight">
+
+              <span className="bg-gradient-to-r from-white via-purple-300 to-pink-400 bg-clip-text text-transparent">
+
+                Pixel And
+
+              </span>
+
               <br />
-              Sample Studio
+
+              <span className="text-white">
+
+                Sample Studio
+
+              </span>
+
             </h2>
 
-            <p className="text-gray-400 mt-6 leading-relaxed max-w-sm">
+            <p className="text-gray-400 mt-6 leading-relaxed max-w-sm text-lg">
+
               Premium cinematic video editing studio crafting
-              immersive visual storytelling experiences for modern creators and brands.
+              immersive visual storytelling experiences
+              for creators, brands, and modern businesses.
+
             </p>
 
           </div>
@@ -30,25 +55,46 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
 
-            <h3 className="text-xl font-bold mb-6">
+            <h3 className="text-xl font-bold mb-8 text-white">
+
               Quick Links
+
             </h3>
 
-            <div className="flex flex-col gap-4 text-gray-400">
+            <div className="flex flex-col gap-5 text-gray-400">
 
-              <a href="#" className="hover:text-purple-400 transition">
+              <a
+                href="#home"
+                className="hover:text-purple-400 transition duration-300"
+              >
                 Home
               </a>
 
-              <a href="#" className="hover:text-purple-400 transition">
-                Portfolio
+              <a
+                href="#about"
+                className="hover:text-purple-400 transition duration-300"
+              >
+                About
               </a>
 
-              <a href="#" className="hover:text-purple-400 transition">
+              <a
+                href="#services"
+                className="hover:text-purple-400 transition duration-300"
+              >
                 Services
               </a>
 
-              <a href="#" className="hover:text-purple-400 transition">
+              <a
+                href="#portfolio"
+                className="hover:text-purple-400 transition duration-300"
+              >
+                Portfolio
+              </a>
+
+              <a
+                href="#contact"
+                className="hover:text-purple-400 transition duration-300"
+              >
                 Contact
               </a>
 
@@ -56,19 +102,22 @@ export default function Footer() {
 
           </div>
 
-          {/* Social */}
+          {/* Connect */}
           <div>
 
-            <h3 className="text-xl font-bold mb-6">
+            <h3 className="text-xl font-bold mb-8 text-white">
+
               Connect
+
             </h3>
 
-            <div className="flex flex-col gap-4 text-gray-400">
+            <div className="flex flex-col gap-5 text-gray-400">
 
               <a
                 href="https://www.instagram.com/pixelandsamplestudio/"
                 target="_blank"
-                className="hover:text-purple-400 transition"
+                rel="noopener noreferrer"
+                className="hover:text-purple-400 transition duration-300"
               >
                 Instagram
               </a>
@@ -76,16 +125,26 @@ export default function Footer() {
               <a
                 href="https://www.youtube.com/@PixelandSampleStudio"
                 target="_blank"
-                className="hover:text-purple-400 transition"
+                rel="noopener noreferrer"
+                className="hover:text-purple-400 transition duration-300"
               >
                 YouTube
               </a>
 
               <a
-                href="mailto:klakshmanadattu@gmail.com"
-                className="hover:text-purple-400 transition"
+                href="mailto:pixelandsamplestudio@gmail.com"
+                className="hover:text-purple-400 transition duration-300"
               >
-                Email:pixelandsamplestudio@gmail.com
+                pixelandsamplestudio@gmail.com
+              </a>
+
+              <a
+                href="https://wa.me/917659097008"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-purple-400 transition duration-300"
+              >
+                WhatsApp
               </a>
 
             </div>
@@ -94,15 +153,19 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 mt-20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-sm tracking-wide">
+
             © 2026 Pixel And Sample Studio. All Rights Reserved.
+
           </p>
 
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600 text-sm tracking-wide">
+
             Crafted with cinematic precision.
+
           </p>
 
         </div>
@@ -110,5 +173,6 @@ export default function Footer() {
       </div>
 
     </footer>
+
   )
 }

@@ -26,55 +26,97 @@ export default function Testimonials() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
+    <section className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#0a0014] to-black overflow-hidden">
 
-      {/* Glow */}
-      <div className="absolute left-0 bottom-0 w-[400px] h-[400px] bg-purple-500/10 blur-[100px] rounded-full"></div>
+      {/* Purple Glow */}
+      <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
+
+      {/* Pink Glow */}
+      <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-pink-500/10 blur-[150px] rounded-full"></div>
+
+      {/* Grid Overlay */}
+      <div className="absolute inset-0 opacity-10">
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+      </div>
 
       <Reveal>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto">
 
-          <div className="text-center mb-20">
+          {/* Heading */}
+          <div className="text-center mb-24">
 
             <p className="uppercase tracking-[6px] text-purple-400 text-sm mb-4">
+
               Testimonials
+
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black leading-none">
-              What Clients
+
+              <span className="text-white">
+                What Clients
+              </span>
+
               <br />
-              Say About Us
+
+              <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+
+                Say About Us
+
+              </span>
+
             </h2>
 
           </div>
 
+          {/* Testimonial Cards */}
           <div className="grid md:grid-cols-3 gap-8">
 
             {testimonials.map((item, index) => (
 
               <div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-[32px] p-8 hover:border-purple-500/40 transition duration-500"
+                className="group relative bg-white/[0.04] border border-white/10 rounded-[36px] p-8 hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500 backdrop-blur-xl overflow-hidden"
               >
 
-                <div className="flex mb-6 text-purple-400 text-2xl">
-                  ★★★★★
-                </div>
+                {/* Hover Glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition duration-700"></div>
 
-                <p className="text-gray-300 leading-relaxed mb-8">
-                  "{item.text}"
-                </p>
+                <div className="relative z-10">
 
-                <div>
+                  {/* Stars */}
+                  <div className="flex mb-6 text-purple-400 text-2xl tracking-[4px]">
 
-                  <h3 className="font-bold text-xl">
-                    {item.name}
-                  </h3>
+                    ★★★★★
 
-                  <p className="text-gray-500 mt-2 text-sm">
-                    {item.role}
+                  </div>
+
+                  {/* Review Text */}
+                  <p className="text-gray-300 leading-relaxed mb-10 text-lg">
+
+                    "{item.text}"
+
                   </p>
+
+                  {/* Client Info */}
+                  <div>
+
+                    <h3 className="font-black text-2xl text-white">
+
+                      {item.name}
+
+                    </h3>
+
+                    <p className="text-gray-500 mt-2 text-sm uppercase tracking-[3px]">
+
+                      {item.role}
+
+                    </p>
+
+                  </div>
 
                 </div>
 
@@ -89,5 +131,6 @@ export default function Testimonials() {
       </Reveal>
 
     </section>
+
   )
 }

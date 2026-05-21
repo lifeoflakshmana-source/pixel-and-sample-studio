@@ -1,13 +1,14 @@
-import { motion } from "framer-motion"
 import { useState } from "react"
 import Reveal from "./Reveal"
 import ProjectModal from "./ProjectModal"
+import { Link } from "react-router-dom"
 
 export default function Portfolio() {
 
   const [selectedProject, setSelectedProject] = useState(null)
 
   const projects = [
+
     {
       title: "Cinematic Reel",
       video: "/videos/project1.mp4",
@@ -37,69 +38,105 @@ export default function Portfolio() {
       title: "Music Sync",
       video: "/videos/project6.mp4",
     },
+
   ]
 
   return (
 
-    <section className="relative py-32 px-6 bg-black">
+    <section
+      id="portfolio"
+      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#0a0014] to-black overflow-hidden"
+    >
+
+      {/* Purple Glow */}
+      <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
+
+      {/* Pink Glow */}
+      <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-pink-500/10 blur-[150px] rounded-full"></div>
+
+      {/* Grid Overlay */}
+      <div className="absolute inset-0 opacity-10">
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+      </div>
 
       <Reveal>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto">
 
-          <div className="mb-20">
+          {/* Heading */}
+          <div className="mb-24 text-center">
 
             <p className="uppercase tracking-[6px] text-purple-400 text-sm mb-4">
+
               Portfolio
+
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black leading-none">
-              Featured
+
+              <span className="text-white">
+                Featured
+              </span>
+
               <br />
-              Projects
+
+              <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+
+                Projects
+
+              </span>
+
             </h2>
 
           </div>
 
+          {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-10">
 
             {projects.map((project, index) => (
 
-              <motion.div
+              <Link
                 key={index}
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
+                to={`/project/${index + 1}`}
                 onClick={() => setSelectedProject(project)}
-                className="group relative overflow-hidden rounded-[32px] border border-white/10 cursor-pointer"
+                className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] backdrop-blur-xl hover:border-purple-500/40 transition duration-500"
               >
 
+                {/* Video */}
                 <video
-  src={project.video}
-  preload="none"
-  muted
-  playsInline
-  preload="metadata"
-  className="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700 pointer-events-none"
-/>
+                  src={project.video}
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700 pointer-events-none"
+                />
 
+                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
 
+                {/* Hover Glow */}
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition duration-700 pointer-events-none" />
+
+                {/* Content */}
                 <div className="absolute bottom-0 left-0 p-8 pointer-events-none">
 
                   <p className="uppercase tracking-[4px] text-purple-400 text-xs mb-3">
+
                     Cinematic Editing
+
                   </p>
 
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-black text-white leading-tight">
+
                     {project.title}
+
                   </h3>
 
                 </div>
 
-              </motion.div>
+              </Link>
 
             ))}
 
@@ -109,11 +146,13 @@ export default function Portfolio() {
 
       </Reveal>
 
+      {/* Modal */}
       <ProjectModal
         project={selectedProject}
         closeModal={() => setSelectedProject(null)}
       />
 
     </section>
+
   )
 }

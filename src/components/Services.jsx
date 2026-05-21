@@ -1,88 +1,136 @@
-import { motion } from "framer-motion"
 import Reveal from "./Reveal"
 
-const services = [
-  "Cinematic Editing",
-  "YouTube Content",
-  "Reels & Shorts",
-  "Wedding Films",
-  "Commercial Videos",
-  "Motion Graphics",
-]
-
 export default function Services() {
+
+  const services = [
+
+    {
+      title: "Cinematic Editing",
+      description:
+        "Luxury cinematic edits crafted with immersive pacing, transitions, color grading, and emotional storytelling.",
+    },
+
+    {
+      title: "Wedding Films",
+      description:
+        "Emotion-driven wedding films designed to preserve timeless memories with cinematic elegance.",
+    },
+
+    {
+      title: "YouTube Content",
+      description:
+        "High-retention YouTube edits optimized for storytelling, pacing, audience engagement, and premium visuals.",
+    },
+
+    {
+      title: "Commercial Ads",
+      description:
+        "Modern commercial edits for brands, businesses, and products with cinematic production aesthetics.",
+    },
+
+  ]
+
   return (
-    <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
-        <Reveal>
-      {/* Glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[60px] rounded-full"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+    <section
+      id="services"
+      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden"
+    >
 
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
+      {/* Purple Glow */}
+      <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
 
-          <p className="uppercase tracking-[8px] text-purple-500 text-sm mb-4">
-            Services
-          </p>
+      {/* Pink Glow */}
+      <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-pink-500/10 blur-[150px] rounded-full"></div>
 
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-none">
-            What We
-            <br />
-            Create
-          </h2>
+      {/* Grid Overlay */}
+      <div className="absolute inset-0 opacity-10">
 
-        </motion.div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+      </div>
 
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-              }}
-              className="group relative bg-white/5 border border-white/10 rounded-[32px] p-10 overflow-hidden bg-black/40-xl"
-            >
+      <Reveal>
 
-              {/* Hover Glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-purple-500/5"></div>
+        <div className="relative z-10 max-w-7xl mx-auto">
 
-              {/* Number */}
-              <div className="text-6xl font-black text-purple-500/40 mb-8">
-                0{index + 1}
+          {/* Heading */}
+          <div className="text-center mb-24">
+
+            <p className="uppercase tracking-[6px] text-purple-400 text-sm mb-4">
+
+              Services
+
+            </p>
+
+            <h2 className="text-5xl md:text-7xl font-black leading-none">
+
+              <span className="text-white">
+                Premium Editing
+              </span>
+
+              <br />
+
+              <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+
+                Solutions
+
+              </span>
+
+            </h2>
+
+          </div>
+
+          {/* Service Cards */}
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {services.map((service, index) => (
+
+              <div
+                key={index}
+                className="group relative bg-white/[0.04] border border-white/10 rounded-[40px] p-10 hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500 overflow-hidden backdrop-blur-xl"
+              >
+
+                {/* Hover Glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition duration-700"></div>
+
+                {/* Card Content */}
+                <div className="relative z-10">
+
+                  {/* Number Box */}
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-fuchsia-500 to-pink-500 shadow-[0_0_40px_rgba(168,85,247,0.35)] flex items-center justify-center text-2xl font-black mb-8">
+
+                    0{index + 1}
+
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-3xl font-black mb-6 text-white">
+
+                    {service.title}
+
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-400 leading-relaxed text-lg">
+
+                    {service.description}
+
+                  </p>
+
+                </div>
+
               </div>
 
-              {/* Title */}
-              <h3 className="text-3xl font-bold mb-6">
-                {service}
-              </h3>
+            ))}
 
-              {/* Description */}
-              <p className="text-gray-400 leading-relaxed">
-                Premium cinematic editing crafted with emotional storytelling,
-                modern pacing, and high-end visual presentation.
-              </p>
-
-            </motion.div>
-          ))}
+          </div>
 
         </div>
 
-      </div>
       </Reveal>
+
     </section>
+
   )
 }

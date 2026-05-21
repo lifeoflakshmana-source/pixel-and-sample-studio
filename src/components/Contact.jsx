@@ -5,25 +5,42 @@ export default function Contact() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-black overflow-hidden"
+    >
+
+      {/* Purple Glow */}
+      <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
+
+      {/* Pink Glow */}
+      <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-pink-500/10 blur-[150px] rounded-full"></div>
+
+      {/* Grid Overlay */}
+      <div className="absolute inset-0 opacity-10">
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+      </div>
 
       <Reveal>
 
-        {/* Glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/10 blur-[8px] rounded-full"></div>
-
         <div className="relative z-10 max-w-5xl mx-auto text-center">
 
+          {/* Small Heading */}
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="uppercase tracking-[8px] text-purple-500 text-sm mb-6"
+            className="uppercase tracking-[8px] text-purple-400 text-sm mb-6"
           >
+
             Let’s Create
+
           </motion.p>
 
+          {/* Main Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -31,28 +48,39 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-black uppercase leading-none"
           >
-            Ready To Build
+
+            <span className="text-white">
+              Ready To Build
+            </span>
+
             <br />
-            Something Cinematic?
+
+            <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+              Something Cinematic?
+            </span>
+
           </motion.h2>
 
+          {/* Description */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-8 text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto"
+            className="mt-8 text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto"
           >
+
             Whether it’s reels, cinematic films, YouTube content,
             or commercial storytelling — Pixel And Sample Studio
             delivers premium visual experiences.
+
           </motion.p>
 
           {/* Contact Form */}
           <form
             action="https://formsubmit.co/klakshmanadattu@gmail.com"
             method="POST"
-            className="mt-12 grid gap-6"
+            className="mt-14 grid gap-6"
           >
 
             {/* Hidden Fields */}
@@ -80,7 +108,8 @@ export default function Contact() {
               name="name"
               placeholder="Your Name"
               required
-              className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition"
+              aria-label="Your Name"
+              className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
             />
 
             {/* Email */}
@@ -89,38 +118,87 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
-              className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition"
+              aria-label="Your Email"
+              className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
             />
 
             {/* Project Type */}
-            <label className="sr-only">Project Type</label>
+            <div className="relative">
 
-<select aria-label="Project Type">
+  <select
+    name="project"
+    required
+    defaultValue=""
+    className="
+      w-full
+      appearance-none
+      bg-white/[0.04]
+      border border-white/10
+      rounded-2xl
+      px-6
+      py-5
+      text-white
+      outline-none
+      focus:border-purple-500
+      backdrop-blur-xl
+      transition
+      duration-300
+    "
+  >
 
-              <option>Project Type</option>
-              <option>Cinematic Editing</option>
-              <option>Wedding Film</option>
-              <option>YouTube Editing</option>
-              <option>Commercial Video</option>
-              <option>Reels / Shorts</option>
+    <option value="" disabled className="bg-black text-gray-400">
+      Select Project Type
+    </option>
 
-            </select>
+    <option className="bg-[#0b0b0b] text-white">
+      Cinematic Editing
+    </option>
+
+    <option className="bg-[#0b0b0b] text-white">
+      Wedding Film
+    </option>
+
+    <option className="bg-[#0b0b0b] text-white">
+      YouTube Editing
+    </option>
+
+    <option className="bg-[#0b0b0b] text-white">
+      Commercial Video
+    </option>
+
+    <option className="bg-[#0b0b0b] text-white">
+      Reels / Shorts
+    </option>
+
+  </select>
+
+  {/* Custom Arrow */}
+  <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-purple-400 text-sm">
+
+    ▼
+
+  </div>
+
+</div>
 
             {/* Message */}
             <textarea
               name="message"
-              rows="5"
+              rows="6"
               placeholder="Tell us about your project..."
               required
-              className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition"
+              aria-label="Message"
+              className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
             />
 
-            {/* Submit */}
+            {/* Submit Button */}
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-[1.02] transition duration-300 px-8 py-4 rounded-2xl text-lg font-semibold"
+              className="bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 hover:scale-[1.03] transition duration-300 px-8 py-5 rounded-2xl text-lg font-semibold shadow-[0_0_40px_rgba(168,85,247,0.35)]"
             >
+
               Send Message
+
             </button>
 
           </form>
@@ -130,5 +208,6 @@ export default function Contact() {
       </Reveal>
 
     </section>
+
   )
 }

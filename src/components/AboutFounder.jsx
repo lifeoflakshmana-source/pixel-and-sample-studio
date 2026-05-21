@@ -4,24 +4,32 @@ export default function AboutFounder() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-[#050505] overflow-hidden">
+    <section
+      id="about"
+      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden"
+    >
 
-      {/* Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full"></div>
+      {/* Purple Glow */}
+      <div className="absolute top-[-150px] right-[-150px] w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full"></div>
+
+      {/* Pink Glow */}
+      <div className="absolute bottom-[-150px] left-[-150px] w-[400px] h-[400px] bg-pink-500/10 blur-[120px] rounded-full"></div>
 
       <Reveal>
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
-          {/* Image */}
-          <div className="relative">
+          {/* Image Side */}
+          <div className="relative group">
 
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-[40px] blur-2xl"></div>
+            {/* Outer Glow */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 via-fuchsia-500/10 to-pink-500/20 rounded-[40px] blur-3xl"></div>
 
+            {/* Image */}
             <img
               src="/images/founder.jpg"
-              alt="Founder"
-              className="relative rounded-[40px] border border-white/10 object-cover w-full h-[700px]"
+              alt="Lakshmana Dattu Founder"
+              className="relative rounded-[40px] border border-white/10 object-cover w-full h-[700px] bg-white/[0.03] backdrop-blur-xl group-hover:scale-[1.02] transition duration-700"
             />
 
           </div>
@@ -29,19 +37,34 @@ export default function AboutFounder() {
           {/* Content */}
           <div>
 
+            {/* Small Heading */}
             <p className="uppercase tracking-[6px] text-purple-400 text-sm mb-6">
+
               Founder
+
             </p>
 
+            {/* Main Heading */}
             <h2 className="text-5xl md:text-7xl font-black leading-none mb-10">
 
-              Lakshmana
+              <span className="bg-gradient-to-r from-white via-purple-300 to-pink-400 bg-clip-text text-transparent">
+
+                Lakshmana
+
+              </span>
+
               <br />
-              Dattu
+
+              <span className="text-white">
+
+                Dattu
+
+              </span>
 
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+            {/* Description */}
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
 
               I build cinematic visual experiences that blend emotion,
               storytelling, rhythm, and modern editing aesthetics.
@@ -51,7 +74,8 @@ export default function AboutFounder() {
 
             </p>
 
-            <p className="text-gray-500 leading-relaxed mb-10">
+            {/* Second Description */}
+            <p className="text-gray-500 leading-relaxed mb-12">
 
               From cinematic reels and wedding films to commercial edits
               and YouTube storytelling — every frame is crafted with
@@ -59,26 +83,41 @@ export default function AboutFounder() {
 
             </p>
 
+            {/* Stats */}
             <div className="flex gap-6 flex-wrap">
 
-              <div className="border border-white/10 rounded-2xl px-6 py-4 bg-white/5">
-                <h3 className="text-3xl font-black text-purple-400">
+              {/* Projects */}
+              <div className="border border-white/10 rounded-3xl px-8 py-6 bg-white/[0.04] backdrop-blur-xl hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500">
+
+                <h3 className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+
                   50+
+
                 </h3>
 
-                <p className="text-gray-400 text-sm mt-2">
+                <p className="text-gray-400 text-sm mt-2 tracking-wide">
+
                   Projects Edited
+
                 </p>
+
               </div>
 
-              <div className="border border-white/10 rounded-2xl px-6 py-4 bg-white/5">
-                <h3 className="text-3xl font-black text-purple-400">
+              {/* Experience */}
+              <div className="border border-white/10 rounded-3xl px-8 py-6 bg-white/[0.04] backdrop-blur-xl hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500">
+
+                <h3 className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+
                   3+
+
                 </h3>
 
-                <p className="text-gray-400 text-sm mt-2">
+                <p className="text-gray-400 text-sm mt-2 tracking-wide">
+
                   Years Experience
+
                 </p>
+
               </div>
 
             </div>
@@ -90,5 +129,6 @@ export default function AboutFounder() {
       </Reveal>
 
     </section>
+
   )
 }

@@ -1,3 +1,6 @@
+import { Routes, Route } from "react-router-dom"
+import ProjectPage from "./pages/ProjectPage"
+
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Showreel from "./components/Showreel"
@@ -10,11 +13,22 @@ import SmoothScroll from "./components/SmoothScroll"
 import ScrollProgress from "./components/ScrollProgress"
 import AboutFounder from "./components/AboutFounder"
 import Testimonials from "./components/Testimonials"
-
+import WhatsAppButton from "./components/WhatsAppButton"
+import InstagramReels from "./components/InstagramReels"
+import Pricing from "./components/Pricing"
+import FAQ from "./components/FAQ"
+import BookingCTA from "./components/BookingCTA"
 
 export default function App() {
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+
+  <Routes>
+
+    {/* Homepage */}
+    <Route
+      path="/"
+      element={
+        <>
       
       <SmoothScroll />
 
@@ -32,14 +46,35 @@ export default function App() {
 
       <Services />
 
+      <Pricing />
+
+      <FAQ />
+
       <Portfolio />
 
       <Testimonials />
 
+      <InstagramReels />
+
+      <BookingCTA />
+
       <Contact />
+
+      <WhatsAppButton />
 
       <Footer />
 
-    </div>
-  )
+      </>
+      }
+    />
+
+    {/* Project Page */}
+    <Route
+      path="/project/:id"
+      element={<ProjectPage />}
+    />
+
+  </Routes>
+
+)
 }
