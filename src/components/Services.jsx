@@ -54,7 +54,7 @@ export default function Services() {
                 y: -10,
                 scale: 1.02,
               }}
-              className="group relative bg-white/5 border border-white/10 rounded-[32px] p-10 overflow-hidden backdrop-blur-xl"
+              className="group relative bg-white/5 border border-white/10 rounded-[32px] p-10 overflow-hidden bg-black/40-xl"
             >
 
               {/* Hover Glow */}

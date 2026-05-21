@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/5 backdrop-blur-2xl border-b border-white/10 shadow-[0_0_40px_rgba(168,85,247,0.08)]">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/5 bg-black/40-2xl border-b border-white/10 shadow-[0_0_40px_rgba(168,85,247,0.08)]">
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
         <h1 className="text-2xl font-black tracking-[6px] uppercase bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">

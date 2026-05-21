@@ -23,7 +23,7 @@ export default function ProjectModal({ project, closeModal }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/80 backdrop-blur-xl z-[99999] flex items-center justify-center p-6"
+      className="fixed inset-0 bg-black/80 bg-black/40-xl z-[99999] flex items-center justify-center p-6"
     >
 
       <motion.div

@@ -29,7 +29,7 @@ export default function Hero() {
 />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 backdrop-blur-[2px]">
+      <div className="relative z-10 text-center px-6 bg-black/40-[2px]">
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
