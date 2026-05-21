@@ -58,6 +58,11 @@ export default function Hero() {
     Sample Studio
 
   </motion.h1>
+  <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+  Premium cinematic video editing, wedding films, reels,
+  YouTube content, and commercial storytelling crafted
+  with luxury visuals and emotional impact.
+</p>
 
 </Reveal>
 
