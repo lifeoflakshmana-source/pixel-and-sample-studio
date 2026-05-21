@@ -34,7 +34,7 @@ export default function Services() {
 
     <section
       id="services"
-      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden"
+      className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden"
     >
 
       {/* Purple Glow */}
@@ -63,7 +63,7 @@ export default function Services() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none">
 
               <span className="text-white">
                 Premium Editing
@@ -88,7 +88,7 @@ export default function Services() {
 
               <div
                 key={index}
-                className="group relative bg-white/[0.04] border border-white/10 rounded-[40px] p-10 hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500 overflow-hidden backdrop-blur-xl"
+                className="group relative glass-card rounded-[40px] p-10 hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500 overflow-hidden backdrop-blur-xl"
               >
 
                 {/* Hover Glow */}

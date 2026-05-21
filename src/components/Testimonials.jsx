@@ -26,7 +26,7 @@ export default function Testimonials() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#0a0014] to-black overflow-hidden">
+    <section className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-[#0a0014] to-black overflow-hidden">
 
       {/* Purple Glow */}
       <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
@@ -54,7 +54,7 @@ export default function Testimonials() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none">
 
               <span className="text-white">
                 What Clients
@@ -79,7 +79,7 @@ export default function Testimonials() {
 
               <div
                 key={index}
-                className="group relative bg-white/[0.04] border border-white/10 rounded-[36px] p-8 hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500 backdrop-blur-xl overflow-hidden"
+                className="group relative glass-card rounded-[36px] p-8 hover:border-purple-500/40 hover:bg-white/[0.06] transition duration-500 backdrop-blur-xl overflow-hidden"
               >
 
                 {/* Hover Glow */}

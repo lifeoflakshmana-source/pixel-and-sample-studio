@@ -5,7 +5,7 @@ export default function Showreel() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
+    <section className="relative py-24 md:py-32 px-5 md:px-20 bg-black overflow-hidden">
 
       {/* Purple Glow */}
       <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
@@ -39,7 +39,7 @@ export default function Showreel() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black uppercase leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase leading-none">
 
               <span className="text-white">
                 Showreel
@@ -63,7 +63,7 @@ export default function Showreel() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative rounded-[40px] overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-[0_0_60px_rgba(168,85,247,0.12)]"
+            className="w-full aspect-video object-cover relative rounded-[40px] overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-[0_0_60px_rgba(168,85,247,0.12)]"
           >
 
             {/* Hover Glow */}

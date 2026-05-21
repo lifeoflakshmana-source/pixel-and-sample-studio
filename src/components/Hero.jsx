@@ -10,6 +10,36 @@ export default function Hero() {
       id="home"
       className="relative h-screen overflow-hidden flex items-center justify-center bg-[#050505]"
     >
+      {/* Floating Particles */}
+
+<div className="absolute inset-0 overflow-hidden">
+
+  {Array.from({ length: 20 }).map((_, i) => {
+
+    const size = 2 + (i % 5)
+    const top = (i * 13) % 100
+    const left = (i * 17) % 100
+    const duration = 2 + (i % 4)
+
+    return (
+
+      <div
+        key={i}
+        className="absolute rounded-full bg-white/10 animate-pulse"
+        style={{
+          width: `${size}px`,
+          height: `${size}px`,
+          top: `${top}%`,
+          left: `${left}%`,
+          animationDuration: `${duration}s`,
+        }}
+      />
+
+    )
+
+  })}
+
+</div>
 
       {/* Top Left Purple Glow */}
       <div className="absolute top-[-250px] left-[-250px] w-[700px] h-[700px] bg-purple-700/30 rounded-full blur-[180px]"></div>
@@ -26,16 +56,22 @@ export default function Hero() {
 
       {/* Animated Center Glow */}
       <motion.div
-        animate={{
-          scale: [1, 1.15, 1],
-          opacity: [0.25, 0.5, 0.25],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-        }}
-        className="absolute w-[700px] h-[700px] bg-purple-500/20 blur-[150px] rounded-full"
-      />
+
+  animate={{
+    scale: [1, 1.2, 1],
+    opacity: [0.25, 0.45, 0.25],
+    x: [-40, 40, -40],
+    y: [-20, 20, -20],
+  }}
+
+  transition={{
+    duration: 12,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+
+  className="absolute w-[900px] h-[900px] bg-purple-500/20 blur-[180px] rounded-full"
+/>
 
       {/* Main Content */}
       <div className="relative z-10 text-center px-6">
@@ -57,7 +93,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="floating-animation text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-none tracking-tight"
+            className="floating-animation text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-none tracking-tight"
           >
 
             <span className="bg-gradient-to-r from-white via-purple-300 to-pink-400 bg-clip-text text-transparent">

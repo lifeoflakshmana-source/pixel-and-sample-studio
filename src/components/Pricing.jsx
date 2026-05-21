@@ -44,7 +44,7 @@ export default function Pricing() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-black to-[#0a0014] overflow-hidden">
+    <section className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-black to-[#0a0014] overflow-hidden">
 
       {/* Purple Glow */}
       <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
@@ -72,7 +72,7 @@ export default function Pricing() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none">
 
               <span className="text-white">
                 Flexible Creative
@@ -100,7 +100,7 @@ export default function Pricing() {
                 className={`relative rounded-[40px] p-10 border overflow-hidden transition duration-500 hover:-translate-y-3 backdrop-blur-xl ${
                   plan.featured
                     ? "bg-gradient-to-b from-purple-500/20 via-fuchsia-500/10 to-pink-500/10 border-purple-500 shadow-[0_0_50px_rgba(168,85,247,0.25)]"
-                    : "bg-white/[0.04] border-white/10 hover:border-purple-500/40"
+                    : "glass-card hover:border-purple-500/40"
                 }`}
               >
 

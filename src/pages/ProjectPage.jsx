@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 export default function ProjectPage() {
 
@@ -42,8 +43,15 @@ export default function ProjectPage() {
 
   return (
 
-    <section className="relative min-h-screen bg-black text-white overflow-hidden px-6 md:px-20 py-32">
-
+    <motion.section
+  initial={{ opacity: 0, scale: 0.96 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0, scale: 1.04 }}
+  transition={{
+    duration: 0.8,
+    ease: [0.22, 1, 0.36, 1],
+  }} className="relative min-h-screen bg-black text-white overflow-hidden px-6 md:px-20 py-32">
+        
       {/* Purple Glow */}
       <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
 
@@ -201,7 +209,7 @@ export default function ProjectPage() {
 
       </div>
 
-    </section>
+    </motion.section>
 
   )
 }

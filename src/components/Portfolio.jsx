@@ -45,7 +45,7 @@ export default function Portfolio() {
 
     <section
       id="portfolio"
-      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#0a0014] to-black overflow-hidden"
+      className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-[#0a0014] to-black overflow-hidden"
     >
 
       {/* Purple Glow */}
@@ -74,7 +74,7 @@ export default function Portfolio() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none">
 
               <span className="text-white">
                 Featured
@@ -108,9 +108,16 @@ export default function Portfolio() {
                 <video
                   src={project.video}
                   muted
+                  loop
                   playsInline
-                  preload="metadata"
-                  className="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700 pointer-events-none"
+                  preload="none"
+                  loading="lazy"
+                  onMouseEnter={(e) => e.target.play()}
+                  onMouseLeave={(e) => {
+                    e.target.pause()
+                    e.target.currentTime = 0
+                  }}
+                  className="w-full h-[320px] md:h-[500px] object-cover group-hover:scale-105 transition duration-700 pointer-events-none"
                 />
 
                 {/* Overlay */}

@@ -26,7 +26,7 @@ export default function InstagramReels() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-black to-[#0a0014] overflow-hidden">
+    <section className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-black to-[#0a0014] overflow-hidden">
 
       {/* Purple Glow */}
       <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
@@ -54,7 +54,7 @@ export default function InstagramReels() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none">
 
               <span className="text-white">
                 Social

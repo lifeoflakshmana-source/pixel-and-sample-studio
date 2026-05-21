@@ -7,7 +7,7 @@ export default function Contact() {
 
     <section
       id="contact"
-      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-black overflow-hidden"
+      className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-[#050505] to-black overflow-hidden"
     >
 
       {/* Purple Glow */}
@@ -46,7 +46,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black uppercase leading-none"
+            className="text-4xl sm:text-5xl md:text-7xl font-black uppercase leading-none"
           >
 
             <span className="text-white">
@@ -109,7 +109,7 @@ export default function Contact() {
               placeholder="Your Name"
               required
               aria-label="Your Name"
-              className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
+              className="glass-card rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
             />
 
             {/* Email */}
@@ -119,7 +119,7 @@ export default function Contact() {
               placeholder="Your Email"
               required
               aria-label="Your Email"
-              className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
+              className="glass-card rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
             />
 
             {/* Project Type */}
@@ -132,8 +132,7 @@ export default function Contact() {
     className="
       w-full
       appearance-none
-      bg-white/[0.04]
-      border border-white/10
+      glass-card
       rounded-2xl
       px-6
       py-5
@@ -188,7 +187,7 @@ export default function Contact() {
               placeholder="Tell us about your project..."
               required
               aria-label="Message"
-              className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
+              className="glass-card rounded-2xl px-6 py-5 outline-none focus:border-purple-500 focus:bg-white/[0.06] transition backdrop-blur-xl text-white placeholder:text-gray-500"
             />
 
             {/* Submit Button */}

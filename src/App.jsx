@@ -1,4 +1,6 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
+
 import ProjectPage from "./pages/ProjectPage"
 
 import Navbar from "./components/Navbar"
@@ -18,63 +20,93 @@ import InstagramReels from "./components/InstagramReels"
 import Pricing from "./components/Pricing"
 import FAQ from "./components/FAQ"
 import BookingCTA from "./components/BookingCTA"
+import Marquee from "./components/Marquee"
+import GrainOverlay from "./components/GrainOverlay"
+import CustomCursor from "./components/CustomCursor"
 
 export default function App() {
+
+  const location = useLocation()
+
   return (
 
-  <Routes>
+    <>
 
-    {/* Homepage */}
-    <Route
-      path="/"
-      element={
-        <>
-      
       <SmoothScroll />
 
-      <ScrollProgress />
-      
       <Loader />
-      
-      <Navbar />
 
-      <Hero />
+      <GrainOverlay />
 
-      <AboutFounder />
+      <CustomCursor />
 
-      <Showreel />
+      <ScrollProgress />
 
-      <Services />
+      <AnimatePresence mode="wait">
 
-      <Pricing />
+        <Routes
+          location={location}
+          key={location.pathname}
+        >
 
-      <FAQ />
+          {/* Homepage */}
+          <Route
+            path="/"
+            element={
 
-      <Portfolio />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+              >
 
-      <Testimonials />
+                <Navbar />
 
-      <InstagramReels />
+                <Hero />
 
-      <BookingCTA />
+                <Marquee />
 
-      <Contact />
+                <AboutFounder />
 
-      <WhatsAppButton />
+                <Showreel />
 
-      <Footer />
+                <Services />
 
-      </>
-      }
-    />
+                <Pricing />
 
-    {/* Project Page */}
-    <Route
-      path="/project/:id"
-      element={<ProjectPage />}
-    />
+                <FAQ />
 
-  </Routes>
+                <Portfolio />
 
-)
+                <Testimonials />
+
+                <InstagramReels />
+
+                <BookingCTA />
+
+                <Contact />
+
+                <WhatsAppButton />
+
+                <Footer />
+
+              </motion.div>
+
+            }
+          />
+
+          {/* Project Page */}
+          <Route
+            path="/project/:id"
+            element={<ProjectPage />}
+          />
+
+        </Routes>
+
+      </AnimatePresence>
+
+    </>
+
+  )
 }

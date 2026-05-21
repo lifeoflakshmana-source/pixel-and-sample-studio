@@ -35,7 +35,7 @@ export default function FAQ() {
 
   return (
 
-    <section className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden">
+    <section className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden">
 
       {/* Purple Glow */}
       <div className="absolute top-[-200px] right-[-200px] w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full"></div>
@@ -63,7 +63,7 @@ export default function FAQ() {
 
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none">
 
               <span className="text-white">
                 Frequently Asked
@@ -88,7 +88,7 @@ export default function FAQ() {
 
               <div
                 key={index}
-                className="bg-white/[0.04] border border-white/10 rounded-[32px] overflow-hidden backdrop-blur-xl hover:border-purple-500/40 transition duration-500"
+                className="glass-card rounded-[32px] overflow-hidden backdrop-blur-xl hover:border-purple-500/40 transition duration-500"
               >
 
                 {/* Question Button */}
@@ -99,7 +99,7 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between text-left p-8"
                 >
 
-                  <span className="text-xl font-bold text-white">
+                  <span className="text-lg md:text-xl font-bold text-white">
 
                     {faq.question}
 

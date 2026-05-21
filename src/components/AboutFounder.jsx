@@ -6,7 +6,7 @@ export default function AboutFounder() {
 
     <section
       id="about"
-      className="relative py-32 px-6 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden"
+      className="relative py-24 md:py-32 px-5 md:px-20 bg-gradient-to-b from-[#050505] to-[#0a0014] overflow-hidden"
     >
 
       {/* Purple Glow */}
@@ -45,7 +45,7 @@ export default function AboutFounder() {
             </p>
 
             {/* Main Heading */}
-            <h2 className="text-5xl md:text-7xl font-black leading-none mb-10">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none mb-10">
 
               <span className="bg-gradient-to-r from-white via-purple-300 to-pink-400 bg-clip-text text-transparent">
 
