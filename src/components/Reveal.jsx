@@ -1,34 +1,20 @@
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
+import { motion } from "framer-motion"
 
 export default function Reveal({ children }) {
 
-  const ref = useRef()
-
-  useEffect(() => {
-
-    gsap.fromTo(
-      ref.current,
-      {
-        opacity: 0,
-        y: 100,
-        filter: "blur(20px)",
-      },
-
-      {
-        opacity: 1,
-        y: 0,
-        filter: "blur(0px)",
-        duration: 1.6,
-        ease: "power4.out",
-      }
-    )
-
-  }, [])
-
   return (
-    <div ref={ref}>
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut"
+      }}
+    >
       {children}
-    </div>
+    </motion.div>
+
   )
 }

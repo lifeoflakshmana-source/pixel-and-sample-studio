@@ -6,10 +6,8 @@ import Portfolio from "./components/Portfolio"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Loader from "./components/Loader"
-import CustomCursor from "./components/CustomCursor"
 import SmoothScroll from "./components/SmoothScroll"
 import ScrollProgress from "./components/ScrollProgress"
-import MouseGlowTrail from "./components/MouseGlowTrail"
 
 
 export default function App() {
@@ -18,11 +16,7 @@ export default function App() {
       
       <SmoothScroll />
 
-      <MouseGlowTrail />
-
       <ScrollProgress />
-      
-      <CustomCursor />
       
       <Loader />
       
