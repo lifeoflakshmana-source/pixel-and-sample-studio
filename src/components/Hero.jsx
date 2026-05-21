@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import MagneticButton from "./MagneticButton"
-import ParticlesBackground from "./ParticlesBackground"
 import Reveal from "./Reveal"
 
 export default function Hero() {
@@ -11,7 +10,6 @@ export default function Hero() {
 
 {/* Floating Pink Light */}
 <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-[150px] animate-pulse"></div>
-        <ParticlesBackground />
 
   <div className="absolute inset-0 opacity-20">
     <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:80px_80px]" />

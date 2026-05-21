@@ -79,7 +79,6 @@ export default function Portfolio() {
                 <video
   src={project.video}
   muted
-  loop
   playsInline
   preload="metadata"
   className="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700 pointer-events-none"

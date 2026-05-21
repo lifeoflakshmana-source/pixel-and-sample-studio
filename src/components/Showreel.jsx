@@ -41,17 +41,13 @@ export default function Showreel() {
         >
 
           <video
-            controls
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover"
-          >
-            <source
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
-              type="video/mp4"
-            />
-          </video>
+  src="/videos/showreel.mp4"
+  muted
+  playsInline
+  preload="metadata"
+  className="w-full h-full object-cover"
+>
+</video>
 
         </motion.div>
 
