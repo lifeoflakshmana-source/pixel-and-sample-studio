@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import MagneticButton from "./MagneticButton"
 import Reveal from "./Reveal"
 
 export default function Hero() {
@@ -79,9 +78,9 @@ export default function Hero() {
           className="mt-10 flex flex-col md:flex-row gap-4 justify-center"
         >
 
-          <MagneticButton>
+          
             View Projects
-            </MagneticButton>
+            
 
           <button className="border border-white/20 hover:border-purple-500 transition px-8 py-4 rounded-2xl text-lg font-semibold">
             Contact Us
