@@ -35,6 +35,7 @@ export default function ProjectModal({ project, closeModal }) {
         {/* Video */}
         <video
   src={project.video}
+  preload="none"
   controls
   muted
   playsInline

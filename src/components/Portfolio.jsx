@@ -78,6 +78,7 @@ export default function Portfolio() {
 
                 <video
   src={project.video}
+  preload="none"
   muted
   playsInline
   preload="metadata"

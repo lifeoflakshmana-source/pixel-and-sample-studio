@@ -10,7 +10,7 @@ export default function Contact() {
       <Reveal>
 
         {/* Glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/10 blur-[8px] rounded-full"></div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
 
@@ -93,10 +93,9 @@ export default function Contact() {
             />
 
             {/* Project Type */}
-            <select
-              name="project"
-              className="bg-black border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition"
-            >
+            <label className="sr-only">Project Type</label>
+
+<select aria-label="Project Type">
 
               <option>Project Type</option>
               <option>Cinematic Editing</option>

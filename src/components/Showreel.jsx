@@ -6,7 +6,7 @@ export default function Showreel() {
     <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
         <Reveal>
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[80px] rounded-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -42,6 +42,7 @@ export default function Showreel() {
 
           <video
   src="/videos/showreel.mp4"
+  preload="none"
   muted
   playsInline
   preload="metadata"

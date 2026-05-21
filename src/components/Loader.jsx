@@ -14,6 +14,7 @@ export default function Loader() {
 
       <video
   src="/videos/logo-intro.mp4"
+  preload="none"
   autoPlay
   muted
   playsInline

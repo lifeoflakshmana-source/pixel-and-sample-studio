@@ -15,7 +15,7 @@ export default function Services() {
     <section className="relative py-32 px-6 md:px-20 bg-black overflow-hidden">
         <Reveal>
       {/* Glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[60px] rounded-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
